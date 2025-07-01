@@ -1,7 +1,7 @@
 import { DynamicTool } from 'langchain/tools';
 import fetch from 'node-fetch';
 
-const API_BASE_URL = process.env.VITE_API_BASE_URL;
+const API_BASE_URL = process.env.API_BASE_URL;
 
 export const getNextLaunchTool = new DynamicTool({
   name: 'get_next_spacex_launch',
