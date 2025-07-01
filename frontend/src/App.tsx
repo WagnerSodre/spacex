@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { API_BASE_URL } from './config';
 import './App.css'
 import backgroundImage from './assets/background.jpg';
 import LaunchCard from './components/LaunchCard';
 import ChatBot from './components/ChatBot';
 import { useFeatureFlagVariantKey } from 'posthog-js/react'
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function SpaceXDashboard() {
   const variant = useFeatureFlagVariantKey('header-color-test');

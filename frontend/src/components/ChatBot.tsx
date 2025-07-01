@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { API_BASE_URL } from '../config';
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function ChatBot() {
     const [messages, setMessages] = useState([
