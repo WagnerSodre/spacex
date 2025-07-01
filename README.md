@@ -43,3 +43,8 @@ docker  compose  up  --build
 - Chatbot com IA usando Gemini
 - Cache de perguntas/respostas com Redis
 - Hotjar embutido no frontend (via script)
+
+## 🌐 Produção
+
+- Frontend: https://spacex-frontend.onrender.com/
+- Backend (API): https://spacex-backend-n48e.onrender.com/
