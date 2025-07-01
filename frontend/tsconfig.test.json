@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["jest", "jsdom"],
+    "typeRoots": ["./node_modules/@types", "./tests/types"],
+    "verbatimModuleSyntax": false
+  },
+  "include": ["tests", "src"],
+}

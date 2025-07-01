@@ -1,0 +1,119 @@
+#root {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #000, #111);
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #222;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.chat-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 5rem;
+  right: 1.5rem;
+  width: 300px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.chat-header {
+  background: red;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.chat-messages {
+  padding: 0.75rem;
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-msg.bot {
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.chat-msg.user {
+  background: #fdd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 0.5rem 1rem;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
