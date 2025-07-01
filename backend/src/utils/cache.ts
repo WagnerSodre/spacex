@@ -1,11 +1,18 @@
 import { createClient } from 'redis';
 
 const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
+const parsedUrl = new URL(redisUrl);
 
-export const redisClient = createClient({ url: redisUrl });
+const useTLS = parsedUrl.protocol === 'rediss:';
 
-redisClient.on('error', (err: any) => {
-  console.error('Erro no Redis:', err);
+export const redisClient = createClient({
+  url: redisUrl,
+  socket: useTLS
+    ? {
+        tls: true,
+        host: parsedUrl.hostname,
+      }
+    : undefined,
 });
 
 export async function connectRedis() {
