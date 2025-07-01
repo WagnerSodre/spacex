@@ -1,0 +1,5 @@
+"Element CSS selector","Total # of interaction points","Visible in image","% of total"
+"html>body","2","Yes","40.00%"
+"div#root>div>main","1","Yes","20.00%"
+"div#root>div>main>section>div","1","Yes","20.00%"
+"div#root>div>main>section>h2 (1)","1","Yes","20.00%"
